@@ -1,0 +1,12 @@
+{
+  "name": "Chatter Test",
+  "manifest_version": 2,
+  "version": "0.0.1",
+  "description": "Comment your opinion on any website",
+  "browser_action": {
+    "default_popup": "index.html",
+    "default_title": "Open Popup"
+  },
+  "content_security_policy": "script-src 'self' 'sha256-Yuju3ZMttwPaRo4epe6h4hJpOlCR6WCw1yrHfNuS+BM='; object-src 'self'",
+  "permissions": []
+}

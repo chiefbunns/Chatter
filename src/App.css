@@ -1,0 +1,141 @@
+::-webkit-scrollbar {
+  width: 0;
+}
+
+.app {
+  width: 300px;
+  min-height: 600px;
+  background-color: #000c08;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.app-header {
+  width: 90%;
+  margin-top: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  font-size: 25px;
+}
+
+.comment-section {
+  overflow-y: scroll;
+  height: 500px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.comment {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #393f3d;
+  color: #f7fffc;
+  border-radius: 4px;
+}
+
+.comment-content {
+  width: 85%;
+}
+
+.commentor-username {
+  font-family: Helvetica, sans-serif;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 700;
+}
+
+.comment-text {
+  font-family: Helvetica, sans-serif;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.add-comment {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #393f3d;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+}
+
+.add-comment:hover {
+  transform: scale(1.025);
+}
+
+.add-comment-input::placeholder {
+  font-family: Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #f7fffc;
+}
+
+.add-comment-input {
+  font-family: Helvetica, sans-serif;
+  font-size: 13px;
+  color: #f7fffc;
+  border: none;
+  background: none;
+}
+
+.add-comment-input:focus {
+  outline: none;
+}
+
+.comment-side-bar {
+  height: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.comment-task-bar {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.text-subtle {
+  font-family: Helvetica, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  color: #dae5e2;
+}
+
+.text-subtle-2 {
+  font-family: Helvetica, sans-serif;
+  font-size: 9px;
+  color: #dae5e2;
+}
+
+.icon-scale {
+  transition: all 0.2s ease-in-out;
+}
+
+.icon-scale:hover {
+  transform: scale(1.2);
+}
+
+.user-icon-small {
+  margin-bottom: 2px;
+}
+
+.plus {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.minus {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
