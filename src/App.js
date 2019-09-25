@@ -9,6 +9,7 @@ import minus from './svgs/minus.svg';
 import share from './svgs/share.svg';
 
 function App() {
+  console.log('guess who')
   return (
     <div className="app">
       <header className="app-header">
