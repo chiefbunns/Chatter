@@ -1,0 +1,60 @@
+::-webkit-scrollbar {
+  width: 0;
+}
+
+.app {
+  width: 350px;
+  min-height: 300px;
+  background-color: #000c08;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.app-header {
+  width: 90%;
+  margin-top: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  font-size: 25px;
+}
+
+.profile {
+  height: 100px;
+  width: 110px;
+  border-radius: 50%;
+  border: 5px solid #07ffb2;
+  margin-top: 40px;
+}
+
+.profile-name {
+  margin-top: 20px;
+  font-family: Helvetica, sans-serif;
+  color: #b8b8ba;
+}
+
+.title {
+  margin-top: 8px;
+  font-family: Helvetica, sans-serif;
+  color: #38373a;
+  margin-right: 12px;
+}
+
+.stats {
+  margin-top: 40px;
+  word-spacing: 50px;
+  color: #b8b8ba;
+}
+
+.stats2 {
+  color: #38373a;
+  word-spacing: 10px;
+}
+
+.line {
+  width: 90%;
+  border-color: #38373a;
+  margin-top: 20px;
+}

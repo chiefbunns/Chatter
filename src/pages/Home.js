@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import '../App.css';
 import Comment from '../components/Comment';
 import AddComment from '../components/AddComment';
 //import axios from 'axios';
@@ -7,14 +6,20 @@ import AddComment from '../components/AddComment';
 class Home extends Component {
     render() {
         return (
-            <div className="comment-section">
-            <AddComment />
-            <Comment />
-            <Comment />
-            <Comment />
+            <div className="comments-body">
+                <AddComment />
+                <div className="comment-section">
+                    <Comment />
+                    <Comment />
+                    <Comment />
+                    <Comment />
+                    <Comment />
+                    <Comment />
+                    <Comment />
+                </div>
             </div>
         )
     }
 }
 
-  export default Home;
+export default Home;
