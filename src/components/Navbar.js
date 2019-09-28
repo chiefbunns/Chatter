@@ -8,6 +8,7 @@ import userIcon from '../svgs/user-icon.svg';
 
 class Navbar extends Component {
 
+  
   render() {
     return (
       <header className="app-header">
