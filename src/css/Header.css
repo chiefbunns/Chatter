@@ -1,0 +1,23 @@
+.app-header {
+  width: 90%;
+  margin-top: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  font-size: 25px;
+}
+
+.c-logo-header {
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.user-icon-header {
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.user-icon-header:hover {
+  transition: all 0.2s ease-in-out;
+  transform: scale(1.2);
+}

@@ -4,7 +4,7 @@
 
 .app {
   width: 350px;
-  min-height: 600px;
+  min-height: 300px;
   background-color: #000c08;
   display: flex;
   flex-direction: column;
@@ -12,13 +12,11 @@
   padding-bottom: 20px;
 }
 
-.app-header {
+.comments-body {
   width: 90%;
-  margin-top: 20px;
-  text-align: center;
   display: flex;
-  justify-content: space-between;
-  font-size: 25px;
+  flex-direction: column;
+  align-items: center;
 }
 
 .comment-section {
@@ -118,12 +116,8 @@
   color: #dae5e2;
 }
 
-.icon-scale {
-  transition: all 0.2s ease-in-out;
-}
-
-.icon-scale:hover {
-  transform: scale(1.2);
+.share-icon {
+  cursor: pointer;
 }
 
 .user-icon-small {
@@ -133,9 +127,19 @@
 .plus {
   margin-top: 10px;
   margin-bottom: 5px;
+  cursor: pointer;
 }
 
 .minus {
   margin-top: 10px;
   margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.icon-scale {
+  transition: all 0.2s ease-in-out;
+}
+
+.icon-scale:hover {
+  transform: scale(1.2);
 }
