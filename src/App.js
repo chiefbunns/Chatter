@@ -4,6 +4,7 @@ import './css/App.css';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Profile from './pages/Profile';
+import ProfileEdit from './pages/Profile-edit'
 import Navbar from './components/Navbar';
 
 class App extends Component {
@@ -16,6 +17,7 @@ class App extends Component {
           <Route exact path="/" component={Home} />
           <Route path="/login" component={Login} />
           <Route path="/profile" component={Profile} />
+          <Route path="/profile-edit" component={ProfileEdit} />
         </Switch>
       </div>
     )
