@@ -10,9 +10,9 @@ class Profile extends Component {
           <img src={profile} alt="Profile" className="profile" />
           <div className="profile-name">Carson Bunnell</div>
         </div>
-        <div className="title">Web Development</div>
+        <div className="title">C******25@gmail.com</div>
         <div className="stats">271 2.5k 384</div>
-        <div className="stats2">Comments Followers Following</div>
+        <div className="stats2">Comments | Upvotes | Downvotes</div>
 
         <hr className="line" />
       </div>
