@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../css/Home.css';
 import Comment from '../components/Comment';
 import AddComment from '../components/AddComment';
 //import axios from 'axios';

@@ -1,0 +1,18 @@
+.comments-body {
+  overflow-y: scroll;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.comment-section {
+  overflow-y: scroll;
+  height: 493px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 4px;
+}
