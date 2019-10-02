@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
-import '../css/Header.css';
+import '../css/Navbar.css';
 import Edit from '../svgs/edit.svg';
 import cLogo from '../svgs/c-logo.svg';
 import userIcon from '../svgs/user-icon.svg';
@@ -8,7 +8,7 @@ import userIcon from '../svgs/user-icon.svg';
 
 class Navbar extends Component {
 
-  
+
   render() {
     return (
       <header className="app-header">

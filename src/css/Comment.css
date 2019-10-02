@@ -1,0 +1,86 @@
+.comment {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #393f3d;
+  color: #f7fffc;
+  border-radius: 4px;
+}
+
+.comment-content {
+  width: 85%;
+}
+
+.commentor-username {
+  font-family: Helvetica, sans-serif;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 700;
+}
+
+.comment-text {
+  font-family: Helvetica, sans-serif;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.comment-side-bar {
+  height: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.comment-task-bar {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.text-subtle {
+  font-family: Helvetica, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  font-style: oblique;
+  color: #dae5e2;
+}
+
+.text-subtle:hover {
+  color: #dae5e2bd;
+}
+
+.text-subtle-2 {
+  font-family: Helvetica, sans-serif;
+  font-size: 9px;
+  color: #dae5e2;
+}
+
+.share-icon {
+  cursor: pointer;
+}
+
+.user-icon-small {
+  margin-bottom: 2px;
+}
+
+.plus {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.minus {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.icon-scale {
+  transition: all 0.2s ease-in-out;
+}
+
+.icon-scale:hover {
+  transform: scale(1.2);
+}

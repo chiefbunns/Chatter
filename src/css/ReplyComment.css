@@ -1,0 +1,30 @@
+.reply-comment {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  justify-items: center;
+  width: 100%;
+  border: none;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #393f3d;
+  border-radius: 4px;
+}
+
+.reply-textarea {
+  width: 90%;
+  resize: none;
+  background: none;
+  border: 2px solid rgba(0, 12, 8, 0.2);
+  border-radius: 4px;
+  padding: 7px;
+  font-family: Helvetica, sans-serif;
+  font-size: 15px;
+  color: #f7fffc;
+}
+
+.reply-textarea::placeholder {
+  font-family: Helvetica, sans-serif;
+  font-size: 15px;
+  color: #dae5e2;
+}
