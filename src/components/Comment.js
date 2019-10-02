@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 //import axios from 'axios';
+import '../css/Comment.css';
+import CommentActions from '../components/CommentActions';
 import userIconSmall from '../svgs/user-icon-s.svg';
 import plus from '../svgs/plus.svg';
 import minus from '../svgs/minus.svg';
-import share from '../svgs/share.svg';
+
 
 class Comment extends Component {
   render() {
@@ -26,11 +28,7 @@ class Comment extends Component {
             flannel salvia iPhone sriracha. You probably haven't heard of them cardigan
             intelligentsia succulents activated charcoal cred.
           </div>
-          <div className="comment-task-bar">
-            <div className="text-subtle">Reply</div>
-            <div className="text-subtle">View Replies (0)</div>
-            <img className="share-icon icon-scale" src={share} alt="Share" />
-          </div>
+          <CommentActions />
         </div>
       </div>
     )

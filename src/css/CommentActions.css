@@ -1,0 +1,42 @@
+.open-share-btns {
+  border: none;
+  background: none;
+  padding: 0px;
+}
+
+.reply-btn {
+  background: none;
+  border: none;
+  padding: 0px;
+  cursor: pointer;
+}
+
+.view-replies-btn {
+  background: none;
+  border: none;
+  padding: 0px;
+  cursor: pointer;
+}
+
+.share-icon {
+  transition: all 0.2s ease-in-out;
+}
+
+.share-icon:hover {
+  transform: scale(1.1);
+}
+
+.add-reply-options {
+  display: flex;
+  justify-content: space-between;
+}
+
+.post-reply-btn {
+  background: none;
+  border: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.post-reply-btn:hover {
+  transform: scale(1.1);
+}
