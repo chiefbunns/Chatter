@@ -2,8 +2,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 90%;
+  width: 50%;
   border: none;
+  padding-top: 2px;
   margin-bottom: 15px;
   background: none;
   transition: all 0.2s ease-in-out;
