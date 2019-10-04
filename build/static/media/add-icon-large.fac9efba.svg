@@ -1,0 +1,26 @@
+
+<svg width="34px" height="34px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <path d="M10,20 C4.4771525,20 0,15.5228475 0,10 C0,4.4771525 4.4771525,0 10,0 C15.5228475,0 20,4.4771525 20,10 C20,15.5228475 15.5228475,20 10,20 Z M10,18.0952381 C14.4708765,18.0952381 18.0952381,14.4708765 18.0952381,10 C18.0952381,5.52912345 14.4708765,1.9047619 10,1.9047619 C5.52912345,1.9047619 1.9047619,5.52912345 1.9047619,10 C1.9047619,14.4708765 5.52912345,18.0952381 10,18.0952381 Z" id="path-1"></path>
+    </defs>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-253.000000, -67.000000)">
+            <g transform="translate(17.000000, 60.000000)">
+                <g transform="translate(236.000000, 7.000000)">
+                    <g >
+                        <g >
+                            <mask fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <use fill="#00FFB2" xlink:href="#path-1"></use>
+                        </g>
+                        <g transform="translate(4.285714, 4.285714)" fill="#00FFB2">
+                            <rect x="4.76190476" y="0" width="1.9047619" height="11.4285714" rx="0.952380952"></rect>
+                            <rect x="0" y="4.76190476" width="11.4285714" height="1.9047619" rx="0.952380952"></rect>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

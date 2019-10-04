@@ -15,6 +15,12 @@ import closeIcon from '../svgs/close-icon.svg';
 import share from '../svgs/share.svg';
 import addIcon from '../svgs/add-icon.svg';
 
+var tablink;
+window.chrome.tabs.getSelected(null, function (tab) {
+    tablink = tab.url;
+});
+
+
 const CommentActions = () => {
 
     const [shareButtons, setShareButtons] = useState(false);
@@ -41,9 +47,9 @@ const CommentActions = () => {
                     </div>}
             </div> :
             <div className="comment-task-bar">
-                <FacebookShareButton url="https://www.google.com" ><FacebookIcon className="share-icon" size={20} round={true} /></FacebookShareButton>
-                <TwitterShareButton url="https://www.google.com"><TwitterIcon className="share-icon" size={20} round={true} /></TwitterShareButton>
-                <RedditShareButton url="https://www.google.com" ><RedditIcon className="share-icon" size={20} round={true} /></RedditShareButton>
+                <FacebookShareButton url={tablink} ><FacebookIcon className="share-icon" size={20} round={true} /></FacebookShareButton>
+                <TwitterShareButton url={tablink}><TwitterIcon className="share-icon" size={20} round={true} /></TwitterShareButton>
+                <RedditShareButton url={tablink} ><RedditIcon className="share-icon" size={20} round={true} /></RedditShareButton>
                 <button className="close-btn" onClick={() => setShareButtons(!shareButtons)}>
                     <img src={closeIcon} alt="Close Icon" />
                 </button>
