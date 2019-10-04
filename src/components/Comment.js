@@ -3,20 +3,20 @@ import React, { Component } from 'react';
 import '../css/Comment.css';
 import CommentActions from '../components/CommentActions';
 import userIconSmall from '../svgs/user-icon-s.svg';
-import plus from '../svgs/plus.svg';
-import minus from '../svgs/minus.svg';
 
 
 class Comment extends Component {
+
+
   render() {
     return (
       <div className="comment">
         <div className="comment-side-bar">
           <img className="user-icon-small" src={userIconSmall} alt="User Icon Small" />
           <div className="text-subtle-2">2d</div>
-          <img className="plus icon-scale" src={plus} alt="Plus" />
+          <span className="fire icon-scale" role="img" aria-label="fire">🔥</span>
           <div className="text-subtle-2">134</div>
-          <img className="minus icon-scale" src={minus} alt="Minus" />
+          <span className="ice icon-scale" role="img" aria-label="ice">❄️</span>
           <div className="text-subtle-2">23</div>
         </div>
         <div className="comment-content">
