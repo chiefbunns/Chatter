@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import '../css/Comment.css';
 import CommentActions from '../components/CommentActions';
 import userIconSmall from '../svgs/user-icon-s.svg';
+import FireAndIce from './FireAndIce';
 
 class Comment extends Component {
   
@@ -13,10 +14,7 @@ class Comment extends Component {
         <div className="comment-side-bar">
           <img className="user-icon-small" src={userIconSmall} alt="User Icon Small" />
           <div className="text-subtle-2">2d</div>
-          <span className="fire icon-scale" role="img" aria-label="fire">🔥</span>
-          <div className="text-subtle-2">134</div>
-          <span className="ice icon-scale" role="img" aria-label="ice">❄️</span>
-          <div className="text-subtle-2">23</div>
+          <FireAndIce />
         </div>
         <div className="comment-content">
           <div className="commentor-username">
