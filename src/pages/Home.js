@@ -8,34 +8,55 @@ class Home extends Component {
     state = {
         comments: null
     }
+
+    refresh = () => {
+        axios
+        .get('/comments')
+        .then((res) => {
+            this.setState({
+                comments: res.data
+            })
+            console.log(this.state.comments);
+        })
+        .catch((err) => console.log(err));
+    }
+
     componentDidMount() {
+    
       axios
         .get('/comments')
         .then((res) => {
             this.setState({
                 comments: res.data
             })
+            console.log(this.state.comments);
         })
         .catch((err) => console.log(err));
     }
     render() {
-        let recentCommentsMarkup = this.state.comments ? (
-            this.state.comments.map((comment) => <p>{comment.body}</p>) //<Comment comment={comment.body}/><p>{comment.body}</p><Comment key={comment.commentId} comment={comment.body}/>
-        ) : (
-        <p>Loading...</p>
-        )
+        if (!this.state.comments) return <div>69</div>
+            const comments = this.state.comments.map((comment) => {
+                return (<Comment 
+                    id={comment.commentId} 
+                    body={comment.body} 
+                    createdAt={comment.createdAt} 
+                    userHandle={comment.userHandle}
+                    />
+                    )
+                }
+                )
         return (
-            <div className="comments-body">
+            <div className="comments-body" onClick={() => this.refresh()}>
                 <AddComment />
                 <div className="comment-section">
-                    <Comment />
-                    {recentCommentsMarkup}
-                    <Comment />
-                    <Comment />
-                    <Comment />
+                    {comments}
+                    {/* {recentCommentsMarkup} */}
+                    {/* <Comment />
                     <Comment />
                     <Comment />
                     <Comment />
+                    <Comment />
+                    <Comment /> */}
                 </div>
             </div>
         )
