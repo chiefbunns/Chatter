@@ -16,9 +16,9 @@ import share from '../svgs/share.svg';
 import addIcon from '../svgs/add-icon.svg';
 
 var tablink;
-window.chrome.tabs.getSelected(null, function (tab) {
-    tablink = tab.url;
-});
+// window.chrome.tabs.getSelected(null, function (tab) {
+//     tablink = tab.url;
+// });
 
 
 const CommentActions = () => {

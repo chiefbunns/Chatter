@@ -4,11 +4,10 @@ import '../css/Comment.css';
 import CommentActions from '../components/CommentActions';
 import userIconSmall from '../svgs/user-icon-s.svg';
 
-
 class Comment extends Component {
-
-
+  
   render() {
+    //const { comment : { body, createdAt, handle, commentId} } = this.props //late we add {userImage, upVote, downVote, commentCount} 
     return (
       <div className="comment">
         <div className="comment-side-bar">
@@ -21,12 +20,12 @@ class Comment extends Component {
         </div>
         <div className="comment-content">
           <div className="commentor-username">
-            noobmaster69
+            waknbake420blazeit
             </div>
           <div className="comment-text">
-            Lorem ipsum dolor amet wolf tumblr PBRB poke, narwhal kale chips leggings
-            flannel salvia iPhone sriracha. You probably haven't heard of them cardigan
-            intelligentsia succulents activated charcoal cred.
+          Bacon ipsum dolor amet doner t-bone chicken strip steak kielbasa biltong. 
+          Strip steak burgdoggen bacon shankle tail pastrami buffalo pork chop alcatra prosciutto meatloaf pork. 
+          Beef ribs meatball drumstick kevin venison frankfurter. Bacon rump picanha pork chop fatback.
           </div>
           <CommentActions />
         </div>
