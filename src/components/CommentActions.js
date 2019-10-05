@@ -19,7 +19,7 @@ var tablink;
 window.chrome.tabs.getSelected(null, function (tab) {
     tablink = tab.url;
 });
-
+// var tablink = "https://www.google.com";
 
 const CommentActions = () => {
 

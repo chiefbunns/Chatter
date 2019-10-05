@@ -65,16 +65,28 @@
   margin-bottom: 2px;
 }
 
+.fire-ice-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .fire {
   margin-top: 10px;
   margin-bottom: 5px;
   cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0px;
 }
 
 .ice {
   margin-top: 10px;
   margin-bottom: 5px;
   cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0px;
 }
 
 .icon-scale {
