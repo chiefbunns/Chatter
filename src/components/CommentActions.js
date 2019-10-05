@@ -15,11 +15,11 @@ import closeIcon from '../svgs/close-icon.svg';
 import share from '../svgs/share.svg';
 import addIcon from '../svgs/add-icon.svg';
 
-// var tablink;
+var tablink;
 // window.chrome.tabs.getSelected(null, function (tab) {
 //     tablink = tab.url;
 // });
-var tablink = "https://www.google.com";
+
 
 const CommentActions = () => {
 
