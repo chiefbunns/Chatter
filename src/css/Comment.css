@@ -1,4 +1,5 @@
 .comment {
+  min-width: 250px;
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
@@ -9,6 +10,9 @@
 }
 
 .comment-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 85%;
 }
 
@@ -20,13 +24,13 @@
 }
 
 .comment-text {
+  margin-top: 10px;
   font-family: Helvetica, sans-serif;
   font-size: 12px;
   line-height: 15px;
 }
 
 .comment-side-bar {
-  height: 90px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
