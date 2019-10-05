@@ -19,7 +19,7 @@
   border: none;
   border-bottom: 3px solid #00ffb2;
   background: none;
-  color: #00ffb2;
+  color: #F7FFFC;
   font-family: Helvetica, sans-serif;
   font-size: 20px;
 }
@@ -28,7 +28,7 @@
   font-family: Helvetica, sans-serif;
   font-style: oblique;
   font-size: 20px;
-  color: #00ffb2;
+  color: #393F3D;
 }
 
 .password-input {
@@ -38,7 +38,7 @@
   border: none;
   border-bottom: 3px solid #00ffb2;
   background: none;
-  color: #00ffb2;
+  color: #F7FFFC;
   font-family: Helvetica, sans-serif;
   font-size: 20px;
 }
@@ -47,7 +47,7 @@
   font-family: Helvetica, sans-serif;
   font-style: oblique;
   font-size: 20px;
-  color: #00ffb2;
+  color: #393F3D;
 }
 
 .login-btn-container {
