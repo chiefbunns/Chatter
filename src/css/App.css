@@ -2,6 +2,15 @@
   width: 0;
 }
 
+html body {
+  position: relative;
+  background-color: #00ffb2;
+  width: 350px;
+  margin: 0 auto;
+}
+
+/* overflow: hidden; */
+
 .app {
   width: 350px;
   min-height: 300px;
