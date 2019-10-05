@@ -31,7 +31,9 @@
   }
 
 .edit-profile {
-    color: #F7FFFC;
+  font-family: Helvetica, sans-serif;
+  color: #F7FFFC;
+    
 }
 
 .edit-name{
@@ -46,11 +48,12 @@
     text-align: center;
     padding: 5px;
     border: none;
-    border-bottom: 1px solid #38373a;
+    border-bottom: 1px solid #07ffb2;
+    margin-left: 40px;
     background: none;
     color: #F7FFFC;
     font-family: Helvetica, sans-serif;
     font-size: 12px;
-    margin-top: 10px;
-    
+    margin-top: 20px;
+    font-style: italic;
 }

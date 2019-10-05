@@ -32,14 +32,9 @@
 .profile-name {
   margin-top: 20px;
   font-family: Helvetica, sans-serif;
-  color: #b8b8ba;
-}
-
-.title {
-  margin-top: 8px;
-  font-family: Helvetica, sans-serif;
-  color: #38373a;
-  margin-right: 12px;
+  color: #07ffb2;
+  margin-left: 8px;
+  font-style: italic;
 }
 
 .stats {

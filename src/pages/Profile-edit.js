@@ -52,11 +52,8 @@ this.setState({
           <img src={profile} alt="Profile" className="profile" />
         </div>
         <form onSubmit={this.onSubmit}>
-        <div className="edit-name">NAME</div>
         <input className="input" placeholder="Edit Display Name" value={this.state.name} onChange={this.onChangeName}  />
-        <div className="edit-name">EMAIL</div>
         <input className="input" placeholder="Edit Email Address" value={this.state.email} onChange={this.onChangeEmail}/>
-        <div className="edit-name">PASSWORD</div>
         <input type ="password" className="input" placeholder="Change Password" value={this.state.password} onChange={this.onChangePassword}/>
         {/* <button type="submit" value="Update Profile Information">Submit</button> */}
         </form>

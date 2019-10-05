@@ -8,9 +8,8 @@ class Profile extends Component {
       <div className="app">
         <div>
           <img src={profile} alt="Profile" className="profile" />
-          <div className="profile-name">Carson Bunnell</div>
+          <div className="profile-name">@ChiefBunns</div>
         </div>
-        <div className="title">C******25@gmail.com</div>
         <div className="stats">271 2.5k 384</div>
         <div className="stats2">Comments | Upvotes | Downvotes</div>
 
