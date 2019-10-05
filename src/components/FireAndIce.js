@@ -6,33 +6,48 @@ import iceIconGray from '../svgs/ice-icon-gray.svg';
 
 const FireAndIce = () => {
 
-    const [minus, setMinus] = useState(0);
-    const [plus, setPlus] = useState(0);
-    const [fireHover, setFireHover] = useState(false);
-    const [iceHover, setIceHover] = useState(false);
+    const [iceTotal, setIceTotal] = useState(0);
+    const [fireTotal, setFireTotal] = useState(0);
+    const [fire, setFire] = useState(false);
+    const [ice, setIce] = useState(false);
 
-    const fireOnClick = () => { setPlus(plus + 1); setFireHover(!fireHover) }
-    const iceOnClick = () => { setMinus(minus + 1); setIceHover(!iceHover) }
+    const fireOnClick = () => {
+        if (ice === true) {
+            setIce(false);
+            setIceTotal(iceTotal - 1)
+        }
+        if (!fire) {
+            setFireTotal(fireTotal + 1);
+            setFire(true);
+        } else {
+            setFireTotal(fireTotal - 1);
+            setFire(false);
+        }
+    }
+    const iceOnClick = () => {
+        if (fire === true) {
+            setFire(false);
+            setFireTotal(fireTotal - 1)
+        }
+        if (!ice) {
+            setIceTotal(iceTotal + 1);
+            setIce(true);
+        } else {
+            setIceTotal(iceTotal - 1);
+            setIce(false);
+        }
+    }
 
     return (
         <div className="fire-ice-container">
             <button className="fire" onClick={() => fireOnClick()}>
-                <img
-                    onMouseEnter={() => { setFireHover(!fireHover) }}
-                    onMouseLeave={() => { setFireHover(!fireHover) }}
-                    src={fireHover === false ? fireIconGray : fireIcon}
-                    alt="Fire Icon"
-                />
+                <img src={fire === false ? fireIconGray : fireIcon} alt="Fire Icon" />
             </button>
-            <div className="text-subtle-2">{plus}</div>
+            <div className="text-subtle-2">{fireTotal}</div>
             <button className="ice" onClick={() => iceOnClick()} >
-                <img
-                    onMouseEnter={() => { setIceHover(!iceHover) }}
-                    onMouseLeave={() => { setIceHover(!iceHover) }}
-                    src={iceHover === false ? iceIconGray : iceIcon}
-                    alt="Ice Icon" />
+                <img src={ice === false ? iceIconGray : iceIcon} alt="Ice Icon" />
             </button>
-            <div className="text-subtle-2">{minus}</div>
+            <div className="text-subtle-2">{iceTotal}</div>
         </div>
     )
 };
