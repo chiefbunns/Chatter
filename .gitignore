@@ -1,3 +1,4 @@
 node_modules
-build
+build/*
+!build/build.xml
 package-lock.json

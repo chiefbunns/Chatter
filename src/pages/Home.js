@@ -6,51 +6,43 @@ import axios from 'axios';
 
 class Home extends Component {
     state = {
-        comments: null
+        comments: null,
+        luke: null
     }
 
     refresh = () => {
         axios
-        .get('/comments')
-        .then((res) => {
-            this.setState({
-                comments: res.data
+            .get('http://localhost:8080/comments')
+            .then((res) => {
+                this.setState({
+                    comments: res.data
+                })
+                console.log("refresh", res);
             })
-            console.log(this.state.comments);
-        })
-        .catch((err) => console.log(err));
+            .catch((err) => console.log("line 22", err));
     }
 
     componentDidMount() {
-    
-      axios
-        .get('/comments')
-        .then((res) => {
-            this.setState({
-                comments: res.data
-            })
-            console.log(this.state.comments);
-        })
-        .catch((err) => console.log(err));
+        console.log("home mounted")
+        this.refresh()
     }
     render() {
-        if (!this.state.comments) return <div>69</div>
-            const comments = this.state.comments.map((comment) => {
-                return (<Comment 
-                    id={comment.commentId} 
-                    body={comment.body} 
-                    createdAt={comment.createdAt} 
-                    userHandle={comment.userHandle}
-                    />
-                    )
-                }
-                )
+        if (!this.state.comments) return <div>{'Loading...'}</div>
+        const comments = this.state.comments.map((comment) => {
+            return (<Comment
+                id={comment.comment_id}
+                body={comment.body}
+                createdAt={comment.created_at}
+                userHandle={comment.user_handle}
+            />
+            )
+        }
+        )
         return (
             <div className="comments-body" onClick={() => this.refresh()}>
                 <AddComment />
                 <div className="comment-section">
                     {comments}
-                    {/* {recentCommentsMarkup} */}
                     {/* <Comment />
                     <Comment />
                     <Comment />
