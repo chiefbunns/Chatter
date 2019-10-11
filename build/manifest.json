@@ -18,10 +18,5 @@
     "128": "c-logo-128.png"
   },
   "content_security_policy": "script-src 'self' 'sha256-Yuju3ZMttwPaRo4epe6h4hJpOlCR6WCw1yrHfNuS+BM='; object-src 'self'",
-  "permissions": [
-      "tabs",
-      "http://*/*",
-      "https://*/*",
-      "proxy"
-  ]
+  "permissions": ["<all_urls>", "tabs", "http://*/*", "https://*/*", "proxy"]
 }
