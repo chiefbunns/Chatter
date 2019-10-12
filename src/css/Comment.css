@@ -21,6 +21,8 @@
   font-size: 12px;
   line-height: 15px;
   font-weight: 700;
+  text-decoration: none;
+  color: #00ffb2;
 }
 
 .comment-text {

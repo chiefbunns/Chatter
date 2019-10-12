@@ -10,7 +10,7 @@ class Login extends Component {
                 <input className="password-input" placeholder="password" />
                 <div className="login-btn-container">
                     <button className="login-btn">Login</button>
-                    <div className="needs-account">need an account? <Link className="sign-up-link" to='/'>sign up</Link></div>
+                    <div className="needs-account">need an account? <Link className="sign-up-link" to='/signup'>sign up</Link></div>
                 </div>
             </div>
         )

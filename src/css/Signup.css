@@ -1,9 +1,8 @@
 :focus {
   outline: none;
 }
-
-.login-container {
-  height: 300px;
+​ .signup-container {
+  height: 600px;
   width: 350px;
   display: flex;
   flex-direction: column;
@@ -11,8 +10,7 @@
   align-items: center;
   background: #000c08;
 }
-
-.username-input {
+​ .username-input {
   width: 250px;
   text-align: center;
   padding: 5px;
@@ -23,15 +21,13 @@
   font-family: Helvetica, sans-serif;
   font-size: 20px;
 }
-
-.username-input::placeholder {
+​ .username-input::placeholder {
   font-family: Helvetica, sans-serif;
   font-style: oblique;
   font-size: 20px;
   color: #393f3d;
 }
-
-.password-input {
+​ .email-input {
   width: 250px;
   text-align: center;
   padding: 5px;
@@ -43,20 +39,53 @@
   font-size: 20px;
 }
 
+.email-input::placeholder {
+  font-family: Helvetica, sans-serif;
+  font-style: oblique;
+  font-size: 20px;
+  color: #393f3d;
+}
+​ .password-input {
+  width: 250px;
+  text-align: center;
+  padding: 5px;
+  border: none;
+  border-bottom: 3px solid #00ffb2;
+  background: none;
+  color: #f7fffc;
+  font-family: Helvetica, sans-serif;
+  font-size: 20px;
+}
 .password-input::placeholder {
   font-family: Helvetica, sans-serif;
   font-style: oblique;
   font-size: 20px;
   color: #393f3d;
 }
-
-.login-btn-container {
+.confirm-password-input {
+  width: 250px;
+  text-align: center;
+  padding: 5px;
+  border: none;
+  border-bottom: 3px solid #00ffb2;
+  background: none;
+  color: #f7fffc;
+  font-family: Helvetica, sans-serif;
+  font-size: 20px;
+}
+.confirm-password-input::placeholder {
+  font-family: Helvetica, sans-serif;
+  font-style: oblique;
+  font-size: 20px;
+  color: #393f3d;
+}
+​ .signup-btn-container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.login-btn {
+.signup-btn {
   width: 250px;
   height: 50px;
   border-radius: 25px;
@@ -69,24 +98,8 @@
   cursor: pointer;
 }
 
-.login-btn:hover {
+.signup-btn:hover {
   transition: all 0.2s ease-in-out;
   background: #00ffb2;
   color: #000c08;
-}
-
-.needs-account {
-  margin-top: 15px;
-  font-family: Helvetica, sans-serif;
-  font-style: oblique;
-  font-weight: 200;
-  font-size: 16px;
-  color: #00ffb2;
-}
-
-.sign-up-link {
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  color: #00ffb2;
 }

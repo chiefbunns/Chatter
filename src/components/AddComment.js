@@ -5,6 +5,8 @@ import '../css/AddComment.css';
 import addIconLarge from '../svgs/add-icon-large.svg';
 import addIcon from '../svgs/add-icon.svg';
 import closeIcon from '../svgs/close-icon.svg';
+import { getPageUrl } from '../url';
+
 
 class AddComment extends React.Component {
   state = {
@@ -24,10 +26,12 @@ class AddComment extends React.Component {
     })
   }
 
-  createComment = () => {
+  createComment = async () => {
+    const page_url = await getPageUrl();
+    console.log('AddComments', page_url)
     const comment = {
       user_handle: "knorty",
-      page_url: "https://espn.com",
+      page_url: page_url,
       body: this.state.commentText,
       created_at: new Date().toISOString(),
       likes_count: 0,
@@ -35,6 +39,7 @@ class AddComment extends React.Component {
       replies_count: 0,
     }
     console.log(comment);
+    console.log(page_url);
 
     axios
       .post('http://localhost:8080/post/comment', comment)
