@@ -10,59 +10,54 @@ class Profile extends Component {
         password: ""
     }
 
-onChangeName = (e) => {
-    this.setState({
-        name : e.target.value
-    })
-}
-
-onChangeEmail = (e) => {
-    this.setState({
-        email : e.target.value
-    })   
-}
-
-onChangePassword = (e) => {
-    this.setState({
-        password : e.target.value
-    })   
-}
-
-onSubmit =() => {
-    const profile_info = {
-        name: this.state.name,
-        email: this.state.email,
-        Password: this.state.password
+    onChangeName = (e) => {
+        this.setState({
+            name: e.target.value
+        })
     }
-axios.post('http://localhost3000/profile', profile_info)
-.then (res => console.log(res.data))
 
-this.setState({
-    name: "",
-    email: "",
-    password: ""
-})
-}
+    onChangeEmail = (e) => {
+        this.setState({
+            email: e.target.value
+        })
+    }
 
-  render() {
-    return (
-      <div className="app">
-          <div className='edit-profile'>Edit Profile</div>
-        <div>
-          <img src={profile} alt="Profile" className="profile" />
-        </div>
-        <form onSubmit={this.onSubmit}>
-        <input className="input" placeholder="Edit Display Name" value={this.state.name} onChange={this.onChangeName}  />
-        <input className="input" placeholder="Edit Email Address" value={this.state.email} onChange={this.onChangeEmail}/>
-        <input type ="password" className="input" placeholder="Change Password" value={this.state.password} onChange={this.onChangePassword}/>
-        {/* <button type="submit" value="Update Profile Information">Submit</button> */}
-        </form>
-        
+    onChangePassword = (e) => {
+        this.setState({
+            password: e.target.value
+        })
+    }
 
+    onSubmit = () => {
+        const profile_info = {
+            user_handle: this.state.name,
+            email: this.state.email,
+            password: this.state.password
+        }
+        axios.post('http://localhost:8080/profile/edit', profile_info)
+            .then(res => console.log(res.data))
 
-      </div>
-    );
-  }
+        this.setState({
+            name: "",
+            email: "",
+            password: ""
+        })
+    }
+
+    render() {
+        return (
+            <div className="app">
+                <div className='edit-profile'>Edit Profile</div>
+                <div>
+                    <img src={profile} alt="Profile" className="profile" />
+                </div>
+                <input className="input" placeholder="Edit Display Name" value={this.state.name} onChange={this.onChangeName} />
+                <input className="input" placeholder="Edit Email Address" value={this.state.email} onChange={this.onChangeEmail} />
+                <input type="password" className="input" placeholder="Change Password" value={this.state.password} onChange={this.onChangePassword} />
+                <button onClick={this.onSubmit}>Submit</button>
+            </div>
+        );
+    }
 }
 
 export default Profile;

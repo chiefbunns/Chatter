@@ -1,13 +1,20 @@
 import React, { Component } from 'react';
 import relativeTime from 'dayjs/plugin/relativeTime';
 import dayjs from 'dayjs';
-//import axios from 'axios';
+import axios from 'axios';
 import '../css/Comment.css';
 import CommentActions from '../components/CommentActions';
 import userIconSmall from '../svgs/user-icon-s.svg';
 import FireAndIce from './FireAndIce';
+import { Link } from 'react-router-dom';
 
 class Comment extends Component {
+
+  deleteComment = () => {
+    axios
+      .delete(`http:localhost:8080/comments/${this.props.id}`)
+      .then((res) => console.log(res));
+  }
 
   render() {
     dayjs.extend(relativeTime)
@@ -15,19 +22,20 @@ class Comment extends Component {
       <div className="comment" key={this.props.id}>
         <div className="comment-side-bar">
           <img className="user-icon-small" src={userIconSmall} alt="User Icon Small" />
-          <div className="text-subtle-2">{dayjs(this.props.created_at).fromNow()}</div>
           <FireAndIce />
         </div>
         <div className="comment-content">
           <div>
-            <div className="commentor-username">
-              {this.props.user_handle}
+            <div>
+              <Link className="commentor-username" to={`/users/${this.props.user_handle}`}>{this.props.user_handle}</Link>
             </div>
+            <div className="text-subtle-2">{dayjs(this.props.created_at).fromNow()}</div>
             <div className="comment-text">
               {this.props.body}
             </div>
           </div>
           <CommentActions />
+          <button onClick={this.deleteComment}>Delete</button>
         </div>
       </div>
     )
