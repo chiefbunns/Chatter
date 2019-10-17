@@ -30,7 +30,7 @@ class Home extends Component {
         const comments = this.state.comments.map((comment, i) => {
             return (<Comment
                 key={i}
-                id={comment.comment_id}
+                comment_id={comment.comment_id}
                 body={comment.body}
                 created_at={comment.created_at}
                 user_handle={comment.user_handle}

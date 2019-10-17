@@ -46,15 +46,15 @@ class Profile extends Component {
 
     render() {
         return (
-            <div className="app">
-                <div className='edit-profile'>Edit Profile</div>
-                <div>
-                    <img src={profile} alt="Profile" className="profile" />
+            <div className="edit-profile-container">
+                <div className="edit-profile-image-container">
+                    <div className='edit-profile'>Edit Profile</div>
+                    <img src={profile} alt="Profile" className="edit-profile-image" />
                 </div>
-                <input className="input" placeholder="Edit Display Name" value={this.state.name} onChange={this.onChangeName} />
-                <input className="input" placeholder="Edit Email Address" value={this.state.email} onChange={this.onChangeEmail} />
-                <input type="password" className="input" placeholder="Change Password" value={this.state.password} onChange={this.onChangePassword} />
-                <button onClick={this.onSubmit}>Submit</button>
+                <input className="edit-input" placeholder="edit user handle" value={this.state.name} onChange={this.onChangeName} />
+                <input className="edit-input" placeholder="edit email" value={this.state.email} onChange={this.onChangeEmail} />
+                <input type="password" className="edit-input" placeholder="change password" value={this.state.password} onChange={this.onChangePassword} />
+                <button className="save-edits-btn" onClick={this.onSubmit}>Save</button>
             </div>
         );
     }

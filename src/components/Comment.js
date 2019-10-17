@@ -19,15 +19,17 @@ class Comment extends Component {
   render() {
     dayjs.extend(relativeTime)
     return (
-      <div className="comment" key={this.props.id}>
+      <div className="comment" key={this.props.comment_id}>
         <div className="comment-side-bar">
           <img className="user-icon-small" src={userIconSmall} alt="User Icon Small" />
-          <FireAndIce />
+          <FireAndIce
+            comment_id={this.props.comment_id}
+          />
         </div>
         <div className="comment-content">
           <div>
             <div>
-              <Link className="commentor-username" to={`/users/${this.props.user_handle}`}>{this.props.user_handle}</Link>
+              <Link className="commentor-username" to={`/profile/${this.props.user_handle}`}>{this.props.user_handle}</Link>
             </div>
             <div className="text-subtle-2">{dayjs(this.props.created_at).fromNow()}</div>
             <div className="comment-text">
