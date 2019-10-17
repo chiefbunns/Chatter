@@ -1,8 +1,9 @@
 :focus {
   outline: none;
 }
-​ .signup-container {
-  height: 600px;
+
+.signup-container {
+  height: 500px;
   width: 350px;
   display: flex;
   flex-direction: column;
@@ -10,24 +11,8 @@
   align-items: center;
   background: #000c08;
 }
-​ .username-input {
-  width: 250px;
-  text-align: center;
-  padding: 5px;
-  border: none;
-  border-bottom: 3px solid #00ffb2;
-  background: none;
-  color: #f7fffc;
-  font-family: Helvetica, sans-serif;
-  font-size: 20px;
-}
-​ .username-input::placeholder {
-  font-family: Helvetica, sans-serif;
-  font-style: oblique;
-  font-size: 20px;
-  color: #393f3d;
-}
-​ .email-input {
+
+.username-signup-input {
   width: 250px;
   text-align: center;
   padding: 5px;
@@ -39,13 +24,14 @@
   font-size: 20px;
 }
 
-.email-input::placeholder {
+.username-signup-input::placeholder {
   font-family: Helvetica, sans-serif;
   font-style: oblique;
   font-size: 20px;
   color: #393f3d;
 }
-​ .password-input {
+
+.signup-email-input {
   width: 250px;
   text-align: center;
   padding: 5px;
@@ -56,12 +42,33 @@
   font-family: Helvetica, sans-serif;
   font-size: 20px;
 }
-.password-input::placeholder {
+
+.signup-email-input::placeholder {
   font-family: Helvetica, sans-serif;
   font-style: oblique;
   font-size: 20px;
   color: #393f3d;
 }
+
+.password-signup-input {
+  width: 250px;
+  text-align: center;
+  padding: 5px;
+  border: none;
+  border-bottom: 3px solid #00ffb2;
+  background: none;
+  color: #f7fffc;
+  font-family: Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+.password-signup-input::placeholder {
+  font-family: Helvetica, sans-serif;
+  font-style: oblique;
+  font-size: 20px;
+  color: #393f3d;
+}
+
 .confirm-password-input {
   width: 250px;
   text-align: center;
@@ -73,13 +80,15 @@
   font-family: Helvetica, sans-serif;
   font-size: 20px;
 }
+
 .confirm-password-input::placeholder {
   font-family: Helvetica, sans-serif;
   font-style: oblique;
   font-size: 20px;
   color: #393f3d;
 }
-​ .signup-btn-container {
+
+.signup-btn-container {
   display: flex;
   flex-direction: column;
   align-items: center;

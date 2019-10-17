@@ -14,6 +14,18 @@ class AddComment extends React.Component {
     commentText: "",
   }
 
+  refresh = async () => {
+    try {
+      const page_url = await getPageUrl();
+      console.log('home',
+        page_url)
+      const { data: comments } = await axios.get(`http://localhost:8080/page_comments?page_url=${encodeURIComponent(page_url)}`)
+      this.setState({ comments })
+    } catch (error) {
+      console.log('refresh', error)
+    }
+  }
+
   setCommentBox = () => {
     this.setState({
       commentBox: !this.state.commentBox
@@ -48,6 +60,7 @@ class AddComment extends React.Component {
       commentBox: false,
       commentText: "",
     })
+    this.refresh();
   }
 
   render() {

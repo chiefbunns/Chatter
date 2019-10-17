@@ -2,12 +2,13 @@
   width: 0;
 }
 
-.app {
+.profile-container {
   width: 350px;
   min-height: 300px;
   background-color: #000c08;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   padding-bottom: 20px;
 }
@@ -21,7 +22,7 @@
   font-size: 25px;
 }
 
-.profile {
+.profile-image {
   height: 100px;
   width: 110px;
   border-radius: 50%;
@@ -29,7 +30,7 @@
   margin-top: 40px;
 }
 
-.profile-name {
+.user-handle {
   margin-top: 20px;
   font-family: Helvetica, sans-serif;
   color: #07ffb2;
