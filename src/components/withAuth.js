@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
+import axios from 'axios';
 
 export default function withAuth(ComponentToProtect) {
     return class extends Component {
@@ -12,7 +13,14 @@ export default function withAuth(ComponentToProtect) {
         }
 
         componentDidMount() {
-            fetch('http://localhost:8080/checktoken')
+            axios({
+                method: 'GET',
+                url: 'http://localhost:8080/checktoken',
+                body: 'comment',
+                headers: {
+                    Authorization: localStorage.getItem('chatter token')
+                }
+            })
                 .then(res => {
                     if (res.status === 200) {
                         this.setState({ loading: false });

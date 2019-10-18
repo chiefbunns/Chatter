@@ -31,15 +31,9 @@ export default class Login extends Component {
             password: this.state.password
         }
         axios.post('http://localhost:8080/users/authenticate', body)
-            // fetch('http://localhost:8080/users/authenticate', {
-            //     method: 'POST',
-            //     body: JSON.stringify(this.state),
-            //     headers: {
-            //         'Content-Type': 'application/json'
-            //     }
-            // })
             .then(res => {
                 if (res.status === 200) {
+                    localStorage.setItem('chatter token', res.data)
                     this.props.history.push('/');
                 } else {
                     const error = new Error(res.error);
