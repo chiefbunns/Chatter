@@ -11,13 +11,19 @@ import { Link } from 'react-router-dom';
 class Comment extends Component {
 
   deleteComment = () => {
-    axios
-      .delete(`http:localhost:8080/comments/${this.props.id}`)
+    axios({
+      method: 'DELETE',
+      url: `http://localhost:8080/comments/${this.props.comment_id}`,
+      headers: {
+        Authorization: localStorage.getItem('chatter token')
+      }
+    })
       .then((res) => console.log(res));
   }
 
   render() {
     dayjs.extend(relativeTime)
+    console.log(this.props.comment_id)
     return (
       <div className="comment" key={this.props.comment_id}>
         <div className="comment-side-bar">

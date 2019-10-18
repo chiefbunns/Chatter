@@ -24,8 +24,8 @@ class App extends Component {
       <div className="app" >
         <Navbar />
         <Switch>
-          <Route exact path="/index.html" component={withAuth(Home)} />
-          <Route exact path="/" component={withAuth(Home)} />
+          <Route exact path="/index.html" component={Home} />
+          <Route exact path="/" component={Home} />
           <Route path="/login" component={Login} />
           <Route path="/signup" component={Signup} />
           <Route path="/profile/:user_handle" component={withAuth(Profile)} />
