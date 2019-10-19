@@ -19,11 +19,13 @@ class Comment extends Component {
       }
     })
       .then((res) => console.log(res));
+
   }
 
   render() {
     dayjs.extend(relativeTime)
     console.log(this.props.comment_id)
+    console.log(this.props.refresh)
     return (
       <div className="comment" key={this.props.comment_id}>
         <div className="comment-side-bar">
