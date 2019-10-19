@@ -1,33 +1,43 @@
 import React, { Component } from 'react';
 import relativeTime from 'dayjs/plugin/relativeTime';
 import dayjs from 'dayjs';
-import axios from 'axios';
 import '../css/Comment.css';
-import CommentActions from '../components/CommentActions';
-import userIconSmall from '../svgs/user-icon-s.svg';
 import FireAndIce from './FireAndIce';
 import { Link } from 'react-router-dom';
+import DeleteComment from './DeleteComment';
+
+//POSSIBLY DELETE?
+//import axios from 'axios';
+//import CommentActions from '../components/CommentActions';
+//import userIconSmall from '../svgs/user-icon-s.svg';
 
 class Comment extends Component {
 
-  deleteComment = () => {
-    axios({
-      method: 'DELETE',
-      url: `http://localhost:8080/comments/${this.props.comment_id}`,
-      headers: {
-        Authorization: localStorage.getItem('chatter token')
-      }
-    })
-      .then((res) => console.log(res));
+  constructor(props) {
+    super(props);
+    this.handleMouseHover = this.handleMouseHover.bind(this);
+    this.state = {
+      isHovering: false,
+    };
+  }
+
+  handleMouseHover() {
+    this.setState(this.toggleHoverState);
+  }
+
+  toggleHoverState(state) {
+    return {
+      isHovering: !state.isHovering,
+    };
   }
 
   render() {
     dayjs.extend(relativeTime)
-    console.log(this.props.comment_id)
+
     return (
-      <div className="comment" key={this.props.comment_id}>
+      <div className="comment" key={this.props.comment_id} onMouseEnter={this.handleMouseHover} onMouseLeave={this.handleMouseHover}>
         <div className="comment-side-bar">
-          <img className="user-icon-small" src={userIconSmall} alt="User Icon Small" />
+          {/* <img className="user-icon-small" src={userIconSmall} alt="User Icon Small" /> */}
           <FireAndIce
             comment_id={this.props.comment_id}
           />
@@ -42,8 +52,15 @@ class Comment extends Component {
               {this.props.body}
             </div>
           </div>
-          <CommentActions />
-          <button onClick={this.deleteComment}>Delete</button>
+          {/* <CommentActions /> */}
+
+          {
+          this.state.isHovering &&
+          <div className="delete-comment">
+           <DeleteComment/>
+          </div>
+          }
+          
         </div>
       </div>
     )
