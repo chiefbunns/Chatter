@@ -10,6 +10,7 @@ import { getPageUrl } from '../url';
 
 class AddComment extends React.Component {
   state = {
+    user_handle: "",
     commentBox: false,
     commentText: "",
   }
@@ -26,6 +27,12 @@ class AddComment extends React.Component {
     }
   }
 
+  setUserHandle = () => {
+    this.setState({
+      userHandle: !this.state.userHandle
+    })
+  }
+
   setCommentBox = () => {
     this.setState({
       commentBox: !this.state.commentBox
@@ -40,6 +47,7 @@ class AddComment extends React.Component {
 
   createComment = async () => {
     const page_url = await getPageUrl();
+    
     console.log('AddComments', page_url)
 
     const token = localStorage.getItem('chatter token')
@@ -47,8 +55,8 @@ class AddComment extends React.Component {
       method: 'POST',
       url: 'http://localhost:8080/post/comment',
       data: {
-        user_handle: "knorty",
-        page_url: page_url,
+        user_handle: "mh222",
+        page_url,
         body: this.state.commentText,
         created_at: new Date().toISOString(),
         likes_count: 0,
