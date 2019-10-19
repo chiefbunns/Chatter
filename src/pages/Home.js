@@ -25,6 +25,7 @@ class Home extends Component {
     componentDidMount() {
         this.refresh()
     }
+
     render() {
         if (!this.state.comments) return <div>{'Loading...'}</div>
         const comments = this.state.comments.map((comment, i) => {
@@ -34,21 +35,16 @@ class Home extends Component {
                 body={comment.body}
                 created_at={comment.created_at}
                 user_handle={comment.user_handle}
+                refresh={this.refresh}
             />
             )
         }
         )
         return (
-            <div className="comments-body" onClick={() => this.refresh()}>
-                <AddComment />
+            <div className="comments-body" >
+                <AddComment onClick={() => this.refresh()} />
                 <div className="comment-section">
                     {comments}
-                    {/* <Comment />
-                    <Comment />
-                    <Comment />
-                    <Comment />
-                    <Comment />
-                    <Comment /> */}
                 </div>
             </div>
         )

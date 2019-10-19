@@ -73,7 +73,6 @@ class AddComment extends React.Component {
       commentBox: false,
       commentText: "",
     })
-    this.refresh();
   }
 
   render() {
