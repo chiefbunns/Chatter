@@ -46,12 +46,6 @@ class Comment extends Component {
 
   render() {
     dayjs.extend(relativeTime)
-<<<<<<< HEAD
-
-=======
-    console.log(this.props.comment_id)
-    console.log(this.props.refresh)
->>>>>>> master
     return (
       <div className="comment" key={this.props.comment_id} onMouseEnter={this.handleMouseHover} onMouseLeave={this.handleMouseHover}>
         <div className="comment-side-bar">
