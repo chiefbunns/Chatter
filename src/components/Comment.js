@@ -13,7 +13,6 @@ import DeleteComment from './DeleteComment';
 
 class Comment extends Component {
 
-<<<<<<< HEAD
   constructor(props) {
     super(props);
     this.handleMouseHover = this.handleMouseHover.bind(this);
@@ -30,24 +29,12 @@ class Comment extends Component {
     return {
       isHovering: !state.isHovering,
     };
-=======
-  deleteComment = () => {
-    axios({
-      method: 'DELETE',
-      url: `http://localhost:8080/comments/${this.props.comment_id}`,
-      headers: {
-        Authorization: localStorage.getItem('chatter token')
-      }
-    })
-      .then((res) => console.log(res));
-
->>>>>>> master
   }
 
   render() {
     dayjs.extend(relativeTime)
     return (
-      <div className="comment" key={this.props.comment_id} onMouseEnter={this.handleMouseHover} onMouseLeave={this.handleMouseHover}>
+      <div className="comment" key={this.props.comment_id} onMouseEnter={this.handleMouseHover} onMouseLeave={this.handleMouseHover}>
         <div className="comment-side-bar">
           {/* <img className="user-icon-small" src={userIconSmall} alt="User Icon Small" /> */}
           <FireAndIce
@@ -67,12 +54,12 @@ class Comment extends Component {
           {/* <CommentActions /> */}
 
           {
-          this.state.isHovering &&
-          <div className="delete-comment">
-           <DeleteComment/>
-          </div>
+            this.state.isHovering &&
+            <div className="delete-comment">
+              <DeleteComment comment_id={this.props.comment_id} />
+            </div>
           }
-          
+
         </div>
       </div>
     )
