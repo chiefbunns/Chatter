@@ -47,15 +47,15 @@ class AddComment extends React.Component {
 
   createComment = async () => {
     const page_url = await getPageUrl();
-    
+
     console.log('AddComments', page_url)
 
     const token = localStorage.getItem('chatter token')
+
     axios({
       method: 'POST',
       url: 'http://localhost:8080/post/comment',
       data: {
-        user_handle: "mh222",
         page_url,
         body: this.state.commentText,
         created_at: new Date().toISOString(),

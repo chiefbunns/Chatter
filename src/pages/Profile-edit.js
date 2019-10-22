@@ -6,9 +6,26 @@ import profile from "../Images/profile.JPG";
 class Profile extends Component {
   state = {
     name: "",
-    email: "",
-    password: ""
+    email: ""
   };
+
+  componentDidMount() {
+    axios({
+      method: 'GET',
+      url: 'http://localhost:8080/profile',
+      headers: {
+        Authorization: localStorage.getItem('chatter token')
+      }
+    })
+      .then(res => {
+        console.log(res.data)
+        this.setState({
+          name: res.data[0].user_handle,
+          email: res.data[0].email
+        })
+      }
+      )
+  }
 
   onChangeName = (e) => {
     this.setState({
@@ -22,26 +39,26 @@ class Profile extends Component {
     });
   };
 
-  onChangePassword = (e) => {
-    this.setState({
-      password: e.target.value
-    });
-  };
 
   onSubmit = () => {
-    const profile_info = {
-      user_handle: this.state.name,
-      email: this.state.email,
-      password: this.state.password
-    };
-    axios
-      .post("http://localhost:8080/profile/edit", profile_info)
-      .then(res => console.log(res.data));
+
+    axios({
+      method: 'PUT',
+      url: 'http://localhost:8080/profile/edit',
+      data: {
+        user_handle: this.state.name,
+        email: this.state.email
+      },
+      headers: {
+        Authorization: localStorage.getItem('chatter token')
+      }
+    })
+      .then((res) => console.log(res.data));
+
 
     this.setState({
       name: "",
-      email: "",
-      password: ""
+      email: ""
     });
   };
 
@@ -63,13 +80,6 @@ class Profile extends Component {
           placeholder="edit email"
           value={this.state.email}
           onChange={this.onChangeEmail}
-        />
-        <input
-          type="password"
-          className="edit-input"
-          placeholder="change password"
-          value={this.state.password}
-          onChange={this.onChangePassword}
         />
         <button className="save-edits-btn" onClick={this.onSubmit}>
           Save
