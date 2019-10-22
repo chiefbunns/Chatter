@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { FaTrash, FaRegTrashAlt, FaMeteor } from 'react-icons/fa';
+import { FaMeteor } from 'react-icons/fa';
 //import { TiTrash } from 'react-icons/ti';
 import axios from 'axios';
 import '../css/Comment.css';

@@ -13,7 +13,6 @@ import DeleteComment from './DeleteComment';
 
 class Comment extends Component {
 
-<<<<<<< HEAD
   constructor(props) {
     super(props);
     this.handleMouseHover = this.handleMouseHover.bind(this);
@@ -30,18 +29,6 @@ class Comment extends Component {
     return {
       isHovering: !state.isHovering,
     };
-=======
-  deleteComment = () => {
-    axios({
-      method: 'DELETE',
-      url: `http://localhost:8080/comments/${this.props.comment_id}`,
-      headers: {
-        Authorization: localStorage.getItem('chatter token')
-      }
-    })
-      .then((res) => console.log(res));
-
->>>>>>> master
   }
 
   render() {
@@ -69,7 +56,7 @@ class Comment extends Component {
           {
           this.state.isHovering &&
           <div className="delete-comment">
-           <DeleteComment/>
+           <DeleteComment comment_id={this.props.comment_id}/>
           </div>
           }
           
