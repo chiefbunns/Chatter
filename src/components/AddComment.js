@@ -67,12 +67,22 @@ class AddComment extends React.Component {
         Authorization: token
       }
     })
-
-      .then((res) => console.log(res.data));
-    this.setState({
-      commentBox: false,
-      commentText: "",
-    })
+    .then(res => {
+      if (res.status === 200) {
+          this.setState({
+            commentBox: false,
+            commentText: "",
+          })
+      } else {
+          this.props.history.push('/login');
+          const error = new Error(res.error);
+          throw error;
+      }
+  })
+  .catch(err => {
+      console.error(err);
+      alert('Please Login Before Posting A Comment');
+  })
   }
 
   render() {
