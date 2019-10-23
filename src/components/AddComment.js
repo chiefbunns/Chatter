@@ -47,15 +47,15 @@ class AddComment extends React.Component {
 
   createComment = async () => {
     const page_url = await getPageUrl();
-    
+
     console.log('AddComments', page_url)
 
     const token = localStorage.getItem('chatter token')
+
     axios({
       method: 'POST',
       url: 'http://localhost:8080/post/comment',
       data: {
-        user_handle: "mh222",
         page_url,
         body: this.state.commentText,
         created_at: new Date().toISOString(),
@@ -67,12 +67,22 @@ class AddComment extends React.Component {
         Authorization: token
       }
     })
-
-      .then((res) => console.log(res.data));
-    this.setState({
-      commentBox: false,
-      commentText: "",
-    })
+    .then(res => {
+      if (res.status === 200) {
+          this.setState({
+            commentBox: false,
+            commentText: "",
+          })
+      } else {
+          this.props.history.push('/login');
+          const error = new Error(res.error);
+          throw error;
+      }
+  })
+  .catch(err => {
+      console.error(err);
+      alert('Please Login Before Posting A Comment');
+  })
   }
 
   render() {

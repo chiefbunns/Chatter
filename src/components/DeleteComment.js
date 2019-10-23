@@ -7,24 +7,24 @@ import '../css/Comment.css';
 
 class DeleteComment extends Component {
 
-    deleteComment = () => {
-        axios({
-          method: 'DELETE',
-          url: `http://localhost:8080/comments/${this.props.comment_id}`,
-          headers: {
-            Authorization: localStorage.getItem('chatter token')
-          }
-        })
-          .then((res) => console.log(res));
+  deleteComment = () => {
+    axios({
+      method: 'DELETE',
+      url: `http://localhost:8080/comments/${this.props.comment_id}`,
+      headers: {
+        Authorization: localStorage.getItem('chatter token')
       }
+    })
+      .then((res) => console.log(res));
+  }
 
-    render() {
-        return (
-            <div title="destroy" className="delete-comment">
-              <FaMeteor title="destroy" size="17px" color="#E84855" onClick={this.deleteComment}/>
-            </div>
-        )
-    }
+  render() {
+    return (
+      <div title="destroy" className="delete-comment">
+        <FaMeteor title="destroy" size="17px" color="#E84855" onClick={this.deleteComment} />
+      </div>
+    )
+  }
 }
 
 export default DeleteComment;

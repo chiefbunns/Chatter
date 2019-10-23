@@ -39,8 +39,8 @@ class Signup extends Component {
             <div className="signup-container">
                 <input className="username-signup-input" name="user_handle" value={this.state.user_handle} placeholder="user handle" onChange={this.handleInput} />
                 <input className="signup-email-input" name="email" value={this.state.email} placeholder="email" onChange={this.handleInput} />
-                <input className="password-signup-input" name="password" value={this.state.password} placeholder="password" onChange={this.handleInput} />
-                <input className="confirm-password-input" name="confirm_password" value={this.state.confirm_password} placeholder="confirm password" onChange={this.handleInput} />
+                <input className="password-signup-input" type="password" name="password" value={this.state.password} placeholder="password" onChange={this.handleInput} />
+                <input className="confirm-password-input" type="password" name="confirm_password" value={this.state.confirm_password} placeholder="confirm password" onChange={this.handleInput} />
                 <div className="signup-btn-container" ></div>
                 <button className="signup-btn" onClick={this.onSubmit}>Signup</button>
             </div>
