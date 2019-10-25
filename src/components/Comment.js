@@ -54,17 +54,10 @@ class Comment extends Component {
           {/* <CommentActions /> */}
 
           {
-<<<<<<< HEAD
-          this.state.isHovering &&
-          <div className="delete-comment">
-           <DeleteComment comment_id={this.props.comment_id}/>
-          </div>
-=======
             this.state.isHovering &&
             <div className="delete-comment">
               <DeleteComment comment_id={this.props.comment_id} />
             </div>
->>>>>>> master
           }
 
         </div>
