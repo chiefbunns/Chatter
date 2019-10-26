@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import "../css/profile-edit.css";
 import axios from "axios";
-import profileTest from "../Images/profile.jpg";
+import avatar from "../Images/profile.jpg";
+
 
 class Profile extends Component {
   state = {
@@ -67,7 +68,7 @@ class Profile extends Component {
       <div className="edit-profile-container">
         <div className="edit-profile-image-container">
           <div className="edit-profile">Edit Profile</div>
-          <img src={profileTest} alt="Profile" className="edit-profile-image" />
+          <img src={avatar} alt="Profile" className="edit-profile-image" />
         </div>
         <input
           className="edit-input"

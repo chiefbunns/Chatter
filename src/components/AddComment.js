@@ -1,6 +1,7 @@
 import React from 'react';
 import Textarea from 'react-textarea-autosize';
 import axios from 'axios';
+import { withRouter } from 'react-router-dom';
 import '../css/AddComment.css';
 import addIconLarge from '../svgs/add-icon-large.svg';
 import addIcon from '../svgs/add-icon.svg';
@@ -67,22 +68,23 @@ class AddComment extends React.Component {
         Authorization: token
       }
     })
-    .then(res => {
-      if (res.status === 200) {
+      .then(res => {
+        if (res.status === 200) {
           this.setState({
             commentBox: false,
             commentText: "",
           })
-      } else {
-          this.props.history.push('/login');
+          this.props.history.go(0);
+        } else {
           const error = new Error(res.error);
           throw error;
-      }
-  })
-  .catch(err => {
-      console.error(err);
-      alert('Please Login Before Posting A Comment');
-  })
+        }
+      })
+      .catch(err => {
+        console.error(err);
+        alert('Please Login Before Posting A Comment');
+        this.props.history.push('/login');
+      })
   }
 
   render() {
@@ -107,4 +109,4 @@ class AddComment extends React.Component {
   }
 }
 
-export default AddComment;
+export default withRouter(AddComment);
