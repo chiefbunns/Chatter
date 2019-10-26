@@ -12,10 +12,10 @@ class Navbar extends Component {
   render() {
     return (
       <header className="app-header">
-        <Link to="/"><img className="c-logo-header" src={cLogo} alt="C Logo" /></Link>
+        <Link to="/"><img className="c-logo-header" src={cLogo} alt="C Logo" title="Chatter Home" /></Link>
         {this.props.location.pathname === "/profile" ?
-          <Link to="/profile-edit"><img className="user-icon-header" src={Edit} alt="Edit Icon" /></Link> :
-          <Link to="/profile"><img className="user-icon-header" src={userIcon} alt="User Icon" /></Link>
+          <Link to="/profile-edit"><img className="user-icon-header" src={Edit} alt="Edit Icon" title="Edit Profile"/></Link> :
+          <Link to="/profile"><img className="user-icon-header" src={userIcon} alt="User Icon" title="Profile"/></Link>
         
         }
       </header>
