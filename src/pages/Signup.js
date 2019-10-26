@@ -31,7 +31,7 @@ class Signup extends Component {
             password: '',
             confirm_password: ''
         })
-        this.props.history.push('/');
+        this.props.history.push('/login');
     }
 
     render() {

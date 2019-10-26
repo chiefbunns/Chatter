@@ -91,7 +91,7 @@ class AddComment extends React.Component {
     return (
       this.state.commentBox === false ?
         <button className="add-comment-btn" onClick={this.setCommentBox}>
-          <img src={addIconLarge} alt="Add Icon" />
+          <img src={addIconLarge} alt="Add Icon" title="Add a Comment"/>
         </button> :
         <div className="add-comment">
           <Textarea className="comment-textarea" value={this.state.commentText} onChange={this.setCommentText} placeholder="Type Comment Here"></Textarea>
