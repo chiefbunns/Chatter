@@ -95,18 +95,13 @@
   padding: 0px;
 }
 
-.delete-comment {
-  display: flex;
-  justify-content: flex-end;
-}
-
 .button {
   color: Transparent;
-  background-repeat:no-repeat;
+  background-repeat: no-repeat;
   border: none;
-  cursor:pointer;
+  cursor: pointer;
   overflow: hidden;
-  outline:none;
+  outline: none;
 }
 
 .icon-scale {

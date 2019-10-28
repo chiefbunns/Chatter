@@ -40,3 +40,15 @@
 .post-reply-btn:hover {
   transform: scale(1.1);
 }
+
+.more-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.more-ations-btn {
+  height: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
