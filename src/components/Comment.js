@@ -44,7 +44,7 @@ class Comment extends Component {
         <div className="comment-content">
           <div>
             <div>
-              <Link className="commentor-username" to={`/profile/${this.props.user_handle}`}>{this.props.user_handle}</Link>
+              <Link className="commentor-username" to={`/view-profile/${this.props.user_handle}`}>{this.props.user_handle}</Link>
             </div>
             <div className="text-subtle-2">{dayjs(this.props.created_at).fromNow()}</div>
             <div className="comment-text">

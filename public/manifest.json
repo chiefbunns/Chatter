@@ -14,11 +14,11 @@
   },
   "commands": {
     "_execute_browser_action": {
-        "suggested_key": {
-            "default": "Alt+Shift+C",
-            "mac": "Alt+Shift+C"
-          }
+      "suggested_key": {
+        "default": "MacCtrl+Shift+C",
+        "mac": "MacCtrl+Shift+C"
       }
+    }
   },
   "icons": {
     "16": "c-logo-16.png",

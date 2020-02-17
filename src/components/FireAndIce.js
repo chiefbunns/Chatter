@@ -23,6 +23,7 @@ class FireAndIce extends Component {
     }
 
     fireOnClick = () => {
+        // This isn't working, state isn't being updated before it's sent through axios
         const fireData = {
             likes_count: this.state.fireTotal,
             dislikes_count: this.state.iceTotal
@@ -33,7 +34,14 @@ class FireAndIce extends Component {
                 ice: false,
                 iceTotal: this.state.iceTotal - 1,
             })
-            axios.put(`http://localhost:8080/likes/${this.props.comment_id}`, fireData)
+            axios({
+                method: 'PUT',
+                url: `http://localhost:8080/decrease_dislikes/${this.props.comment_id}`,
+                data: fireData,
+                headers: {
+                    Authorization: localStorage.getItem('chatter token')
+                }
+            })
                 .then(res => console.log(res.data))
         }
         if (!this.state.fire) {
@@ -41,14 +49,28 @@ class FireAndIce extends Component {
                 fireTotal: this.state.fireTotal + 1,
                 fire: true
             })
-            axios.put(`http://localhost:8080/likes/${this.props.comment_id}`, fireData)
+            axios({
+                method: 'PUT',
+                url: `http://localhost:8080/increase_likes/${this.props.comment_id}`,
+                data: fireData,
+                headers: {
+                    Authorization: localStorage.getItem('chatter token')
+                }
+            })
                 .then(res => console.log(res.data))
         } else {
             this.setState({
                 fireTotal: this.state.fireTotal - 1,
                 fire: false
             })
-            axios.put(`http://localhost:8080/likes/${this.props.comment_id}`, fireData)
+            axios({
+                method: 'PUT',
+                url: `http://localhost:8080/decrease_likes/${this.props.comment_id}`,
+                data: fireData,
+                headers: {
+                    Authorization: localStorage.getItem('chatter token')
+                }
+            })
                 .then(res => console.log(res.data))
         }
     }
@@ -62,7 +84,14 @@ class FireAndIce extends Component {
                 fire: false,
                 fireTotal: this.state.fireTotal - 1,
             })
-            axios.put(`http://localhost:8080/dislikes/${this.props.comment_id}`, iceData)
+            axios({
+                method: 'PUT',
+                url: `http://localhost:8080/decrease_likes/${this.props.comment_id}`,
+                data: iceData,
+                headers: {
+                    Authorization: localStorage.getItem('chatter token')
+                }
+            })
                 .then(res => console.log(res.data))
         }
         if (!this.state.ice) {
@@ -70,14 +99,28 @@ class FireAndIce extends Component {
                 iceTotal: this.state.iceTotal + 1,
                 ice: true
             })
-            axios.put(`http://localhost:8080/dislikes/${this.props.comment_id}`, iceData)
+            axios({
+                method: 'PUT',
+                url: `http://localhost:8080/increase_dislikes/${this.props.comment_id}`,
+                data: iceData,
+                headers: {
+                    Authorization: localStorage.getItem('chatter token')
+                }
+            })
                 .then(res => console.log(res.data))
         } else {
             this.setState({
                 iceTotal: this.state.iceTotal - 1,
                 ice: false
             })
-            axios.put(`http://localhost:8080/dislikes/${this.props.comment_id}`, iceData)
+            axios({
+                method: 'PUT',
+                url: `http://localhost:8080/decrease_dislikes/${this.props.comment_id}`,
+                data: iceData,
+                headers: {
+                    Authorization: localStorage.getItem('chatter token')
+                }
+            })
                 .then(res => console.log(res.data))
         }
     }

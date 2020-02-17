@@ -1,0 +1,9 @@
+<svg width="16px" height="4px" viewBox="0 0 16 4" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-337.000000, -73.000000)" fill="#DAE5E2" fill-rule="nonzero" id="more">
+            <g transform="translate(337.000000, 73.000000)">
+                <path d="M6,2 C6,0.894927536 6.89492754,0 8,0 C9.10507246,0 10,0.894927536 10,2 C10,3.10507246 9.10507246,4 8,4 C6.89492754,4 6,3.10507246 6,2 Z M14,0 C12.8949275,0 12,0.894927536 12,2 C12,3.10507246 12.8949275,4 14,4 C15.1050725,4 16,3.10507246 16,2 C16,0.894927536 15.1050725,0 14,0 Z M2,0 C0.894927536,0 0,0.894927536 0,2 C0,3.10507246 0.894927536,4 2,4 C3.10507246,4 4,3.10507246 4,2 C4,0.894927536 3.10507246,0 2,0 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

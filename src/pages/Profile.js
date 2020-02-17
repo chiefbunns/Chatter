@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import "../css/Profile.css";
-import profile from "../Images/profile.jpg";
+import avatar from "../Images/profile.jpg";
 
 class Profile extends Component {
   state = {
@@ -40,9 +40,9 @@ class Profile extends Component {
     // const user_handle = this.props.match.params.user_handle;
     // console.log(user_handle);
     return (
-      <div className="app">
-        <div>
-          <img src={profile} alt="Profile" className="profile-image" />
+      <div className="profile-container">
+        <div className="user-container">
+          <img src={avatar} alt="Profile" className="profile-image" />
           <div className="user-handle">@{this.state.user_handle}</div>
         </div>
         <div className="stats">271 2.5k 384</div>
