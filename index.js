@@ -18,7 +18,6 @@ app.get('/data', (req, res) => res.send('Working'));
 
 massive(process.env.DATABASE_URL)
     .then(db => {
-
         app.set('db', db);
         console.log('Postgres Connected');
         app.get('/comments', comments.getComments);
